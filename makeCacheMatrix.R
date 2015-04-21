@@ -1,4 +1,4 @@
-# cache a matrix in a separate environment for use later
+# cache a matrix in a separate environment and create getter and setter functions
 makeCacheMatrix <- function(x = matrix()) {
         # should put something here to gracefully return if the matrix is singular
 
@@ -9,7 +9,13 @@ makeCacheMatrix <- function(x = matrix()) {
                 m <<- NULL
         }
         get <- function() x
+
+        # create the setter function
         setinvm <- function(invm) m <<- invm
+
+        # create the getter function
         getinvm <- function() m
+
+        #return functions in environment
         list(set = set, get = get, setinvm = setinvm, getinvm = getinvm)
 }

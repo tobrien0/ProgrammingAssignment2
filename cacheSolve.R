@@ -1,4 +1,4 @@
-# if the matrix is already cached, return it. Otherwise invert the matrix
+# if the inverted matrix is already cached, return it. Otherwise invert the matrix
 cacheSolve <- function(x, ...) {
         m <- x$getinvm()
 
@@ -14,5 +14,7 @@ cacheSolve <- function(x, ...) {
 
         # invert the matrix
         x$setinvm(m)
+
+        # return the inverted matrix
         return(m)
 }

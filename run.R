@@ -1,4 +1,4 @@
-setwd("./git/Programming for R/Assignment2")
+setwd("../git/Programming for R/Assignment2")
 source("cacheSolve.R")
 source("makeCacheMatrix.R")
 
@@ -7,6 +7,14 @@ m
 
 t <- makeCacheMatrix(m)
 t
+t$getinvm()
 
 u <- cacheSolve(t)
 u
+
+
+x = rbind(c(1, -1/4), c(-1/4, 1))
+m = makeCacheMatrix(x)
+m$get()
+cacheSolve(m)
+cacheSolve(m)
