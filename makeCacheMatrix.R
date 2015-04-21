@@ -1,7 +1,5 @@
 # cache a matrix in a separate environment and create getter and setter functions
 makeCacheMatrix <- function(x = matrix()) {
-        # should put something here to gracefully return if the matrix is singular
-
         m <- NULL
         set = function(y) {
                 # put the matrix into a different environment

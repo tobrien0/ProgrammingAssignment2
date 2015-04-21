@@ -1,5 +1,7 @@
 # if the inverted matrix is already cached, return it. Otherwise invert the matrix
 cacheSolve <- function(x, ...) {
+        # should put something here to gracefully return if the matrix is singular
+
         m <- x$getinvm()
 
         # retrieves the matrix from the cache if it exits
